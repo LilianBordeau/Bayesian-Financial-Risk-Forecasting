@@ -1,9 +1,9 @@
 import teradatasql
 
-# Connexion Teradata
-host     = '10.43.67.32'
-user     = 'u165983'
-password = '7BB43ryXd6'
+# Connexion
+host     = ''
+user     = ''
+password = ''
 url      = '{"host":"'+host+'","user":"'+user+'","password":"'+password+'"}'
 
 # Connexion
@@ -14,15 +14,15 @@ curseur   = connexion.cursor()
 nb_factures   = 12 # Nombre de factures sur lesquelles sera calculé le score de risque
 date_min      = '2021-06-01' # Date de départ du jeu de données
 date_max      = 'CURRENT_DATE' # Date de fin du jeu de données
-table_data    = 'VH_S_BANCAIRE.TDI_ECOM_CMD' # Table des données de commandes
-table_bills_m = 'VH_B_FINANCE.TDI_ARBOR_SOLDE_FACTURE' # Table des factures mobiles
-table_bills_f = 'VH_B_FINANCE.'
+table_data    = '' # Table des données de commandes
+table_bills_m = '' # Table des factures
+table_bills_f = ''
 
 # Répertoire SQL
 repertoire = r'SQL/'
 
 # X et Y
-to_exclude = ['ORDER_PACKAGE_NUMBER', 'TITULAIRE_CLARIFY_ID']
+to_exclude = ['ORDER_ID', 'CLIENT_ID']
 
 def get_categorical_X(table_data, to_exclude=[]):
     """ Récupère les variables catégoriques de la table de données.
