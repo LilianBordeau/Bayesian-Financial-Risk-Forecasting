@@ -23,9 +23,9 @@ from sklearn.metrics import roc_auc_score
 import numpy as np
 
 # Connexion Teradata
-host     = '10.43.67.32'
-user     = 'u165983'
-password = '7BB43ryXd6'
+host     = ''
+user     = ''
+password = ''
 url      = '{"host":"'+host+'","user":"'+user+'","password":"'+password+'"}'
 
 # Connexion
@@ -39,8 +39,8 @@ seuil_cardinalite = 1000000 # seuil de cardinalité pour filtrer les tables baye
 n_sample = 10000 # nombre d'échantillons pour entrainer
 
 # Mapping données
-table_data = 'DB_DATALAB_DAF.ML_SCORING_DATA'
-table_risk = 'DB_DATALAB_DAF.ML_SCORING_FINANCIAL_RISK'
+table_data = 'ML_SCORING_DATA'
+table_risk = 'ML_SCORING_FINANCIAL_RISK'
 
 # XGBOOST PARAMETERS Paramètres pour les modèles de régression
 parameters_reg = {
